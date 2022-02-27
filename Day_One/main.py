@@ -1,6 +1,3 @@
-import os
-print (os.getcwd())
-
 with open("./Day_One/input.txt") as File:
    input = File.read().strip().split("\n")
  
