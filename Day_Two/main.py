@@ -35,7 +35,8 @@ class Main():
                 "aim": 0,
                 "up": lambda x: mapping["aim"] - x,
                 "down": lambda x: mapping["aim"] + x,
-                "forward": lambda x: mapping["hPos"] + x,
+                "forward": lambda x: mapping["hPos"] + x, 
+                "aimer": lambda x: mapping["depth"] + mapping["aim"] * x, 
             }
             
             for i, v in enumerate(input):
@@ -48,7 +49,7 @@ class Main():
                     mapping["aim"] = mapping["down"](distance)
                 elif move == "forward" and mapping["aim"]:
                     mapping["hPos"] = mapping["forward"](distance)
-                    mapping["depth"] = mapping["depth"] + (distance * mapping["aim"])
+                    mapping["depth"] = mapping["aimer"](distance)
                 else:
                     mapping["hPos"] = mapping["forward"](distance)
             
