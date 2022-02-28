@@ -23,16 +23,14 @@
 
 ### Understandings:
 
-- 
-- 
-- 
+- Basically the same, but with an added complexity, the "aim"
+- Up and down increment/decrement 'depth' and 'aim', now
 
 ### Observations:
-
-- 
-  - 
-  - 
-  - 
+  - Depth is now a product of (aim *) current horizontal movement forward
+  - should be able to simply add another key into the map and not change much else
+  - Need to account for the condition of "0" in aim
+   - <b>Depth doesn't change if aim is 0</b>
 
 ### Ambiguities:
 
